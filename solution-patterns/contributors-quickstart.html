@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Solution Patterns: Contributors Guide :: Solution Patterns for Cloud Native Architectures</title>
-    <link rel="canonical" href="https://redhat-solution-patterns.github.io/solution-patterns/solution-patterns/contributors-faq.html">
+    <title>Solution Patterns: Contributor&#8217;s guide :: Solution Patterns for Cloud Native Architectures</title>
+    <link rel="canonical" href="https://redhat-solution-patterns.github.io/solution-patterns/solution-patterns/contributors-quickstart.html">
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../_/css/site.css">
 <link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
@@ -180,14 +180,14 @@ a #card {
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="contributors-guide.html">Contributor&#8217;s guide</a>
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="contributors-faq.html">Frequently Asked Questions</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="creating-solution-pattern-website.html">Creating a new solution pattern website</a>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item is-current-page" data-depth="3">
     <a class="nav-link" href="contributors-quickstart.html">Quickstart</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -232,95 +232,136 @@ a #card {
   <ul>
     <li><a href="index.html">Red Hat Solution Patterns</a></li>
     <li><a href="contributors-guide.html">Contributor&#8217;s guide</a></li>
-    <li><a href="contributors-faq.html">Frequently Asked Questions</a></li>
+    <li><a href="creating-solution-pattern-website.html">Creating a new solution pattern website</a></li>
+    <li><a href="contributors-quickstart.html">Quickstart</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/jayachristina/redhat-solution-patterns.github.io/edit/main/documentation/modules/ROOT/pages/contributors-faq.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/jayachristina/redhat-solution-patterns.github.io/edit/main/documentation/modules/ROOT/pages/contributors-quickstart.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Solution Patterns: Contributors Guide</h1>
+<h1 class="page">Solution Patterns: Contributor&#8217;s guide</h1>
 <div class="sect1">
-<h2 id="_frequently_asked_questions"><a class="anchor" href="#_frequently_asked_questions"></a>Frequently Asked Questions</h2>
+<h2 id="_quickstart_guide"><a class="anchor" href="#_quickstart_guide"></a>Quickstart Guide</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Check the contributors' frequently asked questions below:</p>
+<p>Run through this 15-minute section to get started quickly. If you&#8217;re looking for a detailed guide refer to the <a href="contributor-in-depth.html#full-guide" class="xref page">full guide</a>.</p>
 </div>
-<!-- toc disabled -->
-</div>
-</div>
-<div class="sect1">
-<h2>What are solution patterns for cloud native architecture?</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="prereqs"><a class="anchor" href="#prereqs"></a>Prerequisites</h3>
 <div class="paragraph">
-<p>It&#8217;s a resourceful set of information about an opinionated reference architecture that addresses one or more scenarios and challenges faced by developers and architects.</p>
+<p>Before getting started, make sure to have the following CLI tools installed on your local machine: <code>git</code>, <code>node</code>, <code>npm</code>(&gt;=12.13.0) and <code>gulp</code>.</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2>What is part of a solution pattern?</h2>
+<h2 id="_1_creating_a_new_project"><a class="anchor" href="#_1_creating_a_new_project"></a>1. Creating a new project</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See the key assets that initially composes a solution pattern:</p>
+<p>To save you some time and quickly get started documenting, we&#8217;ll use as a foundation the <a href="https://github.com/redhat-solution-patterns/solution-pattern-website-template" target="_blank" rel="noopener">Solution Pattern website template</a>.</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the <a href="https://github.com/redhat-solution-patterns/solution-pattern-website-template">template&#8217;s repository</a> and click on the green button <strong>"Use this template"</strong> and choose <strong>Create a new repository</strong>;</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/create-repo-button.png" alt="create repo button" width="100%">
+</div>
+</div>
+</li>
+<li>
+<p>Choose the following options in <strong>Create a new repository</strong> page that is displayed:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Check the <strong>Include all branches</strong> to ensure the github pages are deployed correctly.</p>
+</li>
+<li>
+<p>Enter your repository name (e.g. <code>solution-pattern-xyz</code>) and a description</p>
+</li>
+<li>
+<p>Choose an appropriate <strong>Owner</strong> (your personal account or one of your organizations). Once you&#8217;re ready to publish your first version, you can move or fork the repository into the <a href="https://github.com/redhat-solution-patterns">redhat-solution-patterns</a> organization.</p>
+</li>
+<li>
+<p>To avail of github pages to publish your documentation, keep the repository as <strong>Public</strong>.</p>
+</li>
+<li>
+<p>Click on <strong>"Create repository"</strong>;</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/create-new-repo-page.png" alt="create new repo page" width="100%">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>In a few seconds your repo will ready for use.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_building_and_running_the_project"><a class="anchor" href="#_2_building_and_running_the_project"></a>2. Building and Running the project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Next, let&#8217;s build and run the project on development mode.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Clone the <strong>new</strong> repository to your local machine using <code>git clone</code> from your local CLI.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+You can rely on hot-reload features during your development; therefore, you&#8217;ll save time validating your implementation&#8217;s output results.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>In a terminal, navigate to your project&#8217;s repository;</p>
+</li>
+<li>
+<p>Build and start the project with:</p>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">npm install
+npx gulp</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>A new page should open on your browser pointing to <a href="http://localhost:3000/solution-pattern-template/index.html" class="bare">http://localhost:3000/solution-pattern-template/index.html</a></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_next_actions"><a class="anchor" href="#_3_next_actions"></a>3. Next actions</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Architectural representation of the solution (preferably with <a href="https://c4model.com/">C4 Model</a>);</p>
+<p>Get familiar with  <a href="contributor-in-depth.html#structure" class="xref page">the project&#8217;s structure</a>.</p>
 </li>
 <li>
-<p>Reproducible implementation of the architectural solution;</p>
+<p>Know the available capabilities <a href="contributor-in-depth.html#_language_and_components" class="xref page">to complete your document</a>.</p>
 </li>
 <li>
-<p>Open documentation through a website (for more information check: <a href="creating-solution-pattern-website.html" class="xref page">Solution Patterns: Contributors Guide</a>);</p>
-</li>
-<li>
-<p>Potential use cases and objectives;</p>
-</li>
-<li>
-<p>Architecture technical explanation;</p>
-</li>
-<li>
-<p>Implementation (demo) explanation and details;</p>
+<p>Learn how to <a href="contributor-in-depth.html#_4_publish" class="xref page">publish the pattern</a> as a github page.</p>
 </li>
 </ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2>Who can contribute?</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The solution patterns are open source under the apache license and everyone is welcome to contribute by sending fixes, enhancements and creating new solutions.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2>How to contribute?</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>These are some ways you can contribute to the architectural solution patterns for cloud native apps:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Report issues via GitHub;</p>
-</li>
-<li>
-<p>Send pull requests to fix open issues or enhance existing content and demos;</p>
-</li>
-<li>
-<p>Create new solution patterns and submit via pull request;</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2>Who are the people behind the solution patterns?</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The content shared with all the community of developers and architects are mostly brought and backed by Red Hat experienced professionals. We welcome external contributors as welcome as well.</p>
 </div>
 </div>
 </div>
